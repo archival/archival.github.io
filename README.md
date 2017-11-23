@@ -9,9 +9,9 @@ The Archives and Linked Data Interest Group is an informal group of archivists, 
 
 ## Projects
 
-<dl>
 {% for repository in site.github.public_repositories %}
-  <dt>[{{ repository.name }}]({{ repository.html_url }})</dt>
-  <dd>{{ repository.description }}</dd>
+{% if repository.name != 'archival.github.io' %}
+* [{{ repository.name }}]({{ repository.html_url }}): {{ repository.description }}
+{% endif %}
 {% endfor %}
 </dl>
