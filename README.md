@@ -4,14 +4,13 @@ The Archives and Linked Data Interest Group is an informal group of archivists, 
 
 ## Communicate with us
 
-* [Google Group](https://groups.google.com/d/forum/archives-and-linked-data)
+* [Google Group](https://groups.google.com/d/forum/archives-and-linked-data): archives-and-linked-data at googlegroups dot com 
 * Slack channel: `#linkeddata` on the [Archivists Working with Data Slack team](https://shoes-untied.slack.com/)
 
 ## Projects
 
-{% for repository in site.github.public_repositories %}
+{% assign repos = (site.github.public_repositories | sort: 'created_at') | reverse %}
+{% for repository in repos %}
 {% if repository.name != 'archival.github.io' %}
-* [{{ repository.name }}]({{ repository.html_url }}): {{ repository.description }}
-{% endif %}
+* [{{ repository.name }}]({{ repository.html_url }}): {{ repository.description }}{% endif %}
 {% endfor %}
-</dl>
