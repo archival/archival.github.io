@@ -11,5 +11,4 @@ The Archives and Linked Data Interest Group is an informal group of archivists, 
 
 {% assign repos = (site.github.public_repositories | sort: 'created_at') | reverse %}
 {% for repository in repos %}
-{% if repository.name != 'archival.github.io' %}
-* [{{ repository.name }}]({{ repository.html_url }}): {{ repository.description }}{% endif %} {% endfor %}
+{% if repository.name != 'archival.github.io' %}* [{{ repository.name }}]({{ repository.html_url }}): {{ repository.description }}{% endif %} {% endfor %}
