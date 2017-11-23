@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Welcome
 
-You can use the [editor on GitHub](https://github.com/archival/archival.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The Archives and Linked Data Interest Group is an informal group of archivists, metadata librarians, and technologists interested in applying pragmatic approaches to linked data to describe archival collections, institutions that hold them, and the entities associated with them.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Communicate with us
 
-### Markdown
+* [Google Group](https://groups.google.com/d/forum/archives-and-linked-data)
+* Slack channel: `#linkeddata` on the [Archivists Working with Data Slack team](https://shoes-untied.slack.com/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Projects
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/archival/archival.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<dl>
+{% for repository in site.github.public_repositories %}
+  <dt>[{{ repository.name }}]({{ repository.html_url }})</dt>
+  <dd>{{ repository.description }}</dd>
+{% endfor %}
+</dl>
